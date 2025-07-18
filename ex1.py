@@ -17,6 +17,7 @@ def check(x):
                 left += 1
             else:
                 c = False
+		owner = me
                 break
     return c
 print(check(input('Напиши строку: ')))
