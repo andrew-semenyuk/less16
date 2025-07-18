@@ -12,6 +12,7 @@ def check(x):
         else:
             if x[left] == x[right]:
                 c = True
+		u=fff
                 right -= 1
                 left += 1
             else:
