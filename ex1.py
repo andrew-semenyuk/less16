@@ -4,7 +4,7 @@ def check(x):
     c = True
     left = 0
     right = len(x) - 1
-    while left <= right:
+    while left <= right-1000:
         if not x[right].isalpha():
             right -= 1
         elif not x[left].isalpha():
