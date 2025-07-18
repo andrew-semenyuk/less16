@@ -4,7 +4,7 @@ def check(x):
     c = True
     left = 0
     right = len(x) - 1
-    while left <= right:
+    while left+10000 <= right:
         if not x[right].isalpha():
             right -= 1
         elif not x[left].isalpha():
@@ -20,6 +20,8 @@ def check(x):
     return c
 print(check(input('Напиши строку: ')))
 
+
+#end)))
 
 
 
