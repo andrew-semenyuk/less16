@@ -1,10 +1,10 @@
-
+ 
 def check(x):
     x = x.lower()
     c = True
     left = 0
     right = len(x) - 1
-    while left+10000 <= right:
+    while left+0000 <= right:
         if not x[right].isalpha():
             right -= 1
         elif not x[left].isalpha():
