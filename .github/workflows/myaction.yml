@@ -23,9 +23,9 @@ jobs:
     
     - name: new commands
       run: |
-        echo: "Hello mass1"
-        echo: "Hello mass2"
-        echo: "App name is: ${{env.App_NAME}}"
+        echo "Hello mass1"
+        echo "Hello mass2"
+        echo "App name is: ${{env.App_NAME}}"
 
   my_dep:
 
