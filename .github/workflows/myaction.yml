@@ -26,9 +26,15 @@ jobs:
         echo "Hello mass1"
         echo "Hello mass2"
         echo "App name is: ${{env.App_NAME}}"
+    
     - name: list curr folder
       run: ls -la
-      
+
+    - name: git clone this rep
+      uses: actions/checkout@v1
+    
+    - name: list curr folder
+      run: ls -la
 
   my_dep:
 
@@ -41,6 +47,12 @@ jobs:
 
     - name: print dep_pack
       run: echo "Pack name is ${{env.PACK_NAME}}"
+
+    - name: last vers AWS
+      run: aws --version
+
+    - name: vers zip
+      run: zip
       
     
     
