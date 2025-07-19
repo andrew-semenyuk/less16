@@ -40,7 +40,10 @@ jobs:
 
     runs-on: ubuntu-latest
     needs: [my_test]
-
+    env:
+      var1: "Job1"
+      var2: "Job2"
+      
     steps:
     - name: Hello by dep
       run: echo "Hello world by dep"
@@ -48,11 +51,19 @@ jobs:
     - name: print dep_pack
       run: echo "Pack name is ${{env.PACK_NAME}}"
 
+    - name: print local envs
+      run: |
+        echo "var1 = ${{env.var1}}"
+        echo "var2 = ${{env.var2}}"
+        echo "Local var = $Local_var"
+      env:
+        Local_var: "Mega loca"
+        
     - name: last vers AWS
       run: aws --version
 
     - name: vers zip
-      run: zip
+      run: zip --version
       
     
     
