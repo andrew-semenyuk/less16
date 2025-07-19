@@ -13,10 +13,12 @@ def check(x):
             if x[left] == x[right]:
                 c = True
 		u=fff
+aaaa
                 right -= 1
                 left += 1
             else:
                 c = False
+		owner = me
                 break
     return c
 print(check(input('Напиши строку: ')))
