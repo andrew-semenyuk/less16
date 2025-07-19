@@ -1,0 +1,30 @@
+#---------------------------
+#Github action by Andrew Semenyuk
+#--------------------------
+name: my_GitHub_Action
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  my_test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Print Hello mass
+      run: echo "Hello world! from testing"
+
+
+  my_dep:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Hello by dep
+      run: echo "Hello world by dep"
+      
+    
+    
