@@ -2,6 +2,10 @@
 #Github action by Andrew Semenyuk
 #--------------------------
 name: my_GitHub_Action
+env:
+  App_NAME : "MY N"
+  PACK_NAME: "test action vers-${{github.sha}}"
+  
 
 on:
   push:
@@ -16,7 +20,12 @@ jobs:
     steps:
     - name: Print Hello mass
       run: echo "Hello world! from testing"
-
+    
+    - name: new commands
+      run: |
+        echo: "Hello mass1"
+        echo: "Hello mass2"
+        echo: "App name is: ${{env.App_NAME}}"
 
   my_dep:
 
@@ -26,6 +35,9 @@ jobs:
     steps:
     - name: Hello by dep
       run: echo "Hello world by dep"
+
+    - name: print dep_pack
+      run: echo "Pack name is ${{env.PACK_NAME}}"
       
     
     
