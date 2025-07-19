@@ -21,6 +21,7 @@ jobs:
   my_dep:
 
     runs-on: ubuntu-latest
+    needs: [my_test]
 
     steps:
     - name: Hello by dep
