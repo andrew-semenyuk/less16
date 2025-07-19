@@ -26,6 +26,9 @@ jobs:
         echo "Hello mass1"
         echo "Hello mass2"
         echo "App name is: ${{env.App_NAME}}"
+    - name: list curr folder
+      run: ls -la
+      
 
   my_dep:
 
